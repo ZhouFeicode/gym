@@ -1,0 +1,27 @@
+server:
+  servlet:
+    context-path: /api
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/job?allowPublicKeyRetrieval=true&useUnicode=true&useSSL=false&allowMultiQueries=true
+    username: root
+    password: root
+  mail:
+    host: smtp.sina.com
+    port: 465
+    username: amailabao@sina.com  #你的邮箱
+    password: fa6f91637cd675f7       #SMTP授权码（QQ邮箱网页端开启SMTP后生成）
+    default-encoding: UTF-8
+    properties:
+      mail:
+        smtp:
+          auth: true
+          ssl:
+            enable: true
+          starttls:
+            enable: true
+            required: true
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
